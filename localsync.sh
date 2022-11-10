@@ -16,4 +16,20 @@ echo -e "\e[1;31m${bold}copying .zshrc ${normal}\e[0m"
 cp $HOME/.zshrc .zshrc
 echo -e "\e[1;31m${bold}Done copying .zshrc ${normal}\e[0m"
 
-#
+# Copy fonts for backup
+echo -e "\e[1;31m${bold}Copying .fonts to .kelvin-configs ... ${normal}\e[0m"
+cp $HOME/.fonts/* ./.fonts
+echo -e "\e[1;31m${bold}Done copying fonts to .kelvin-configs${normal}\e[0m"
+
+# alacritty
+echo -e "\e[1;31m${bold}copying alacritty to .kelvin-configs${normal}\e[0m"
+cp -r $CONFIG_DIR/alacritty ./alacritty
+echo -e "\e[1;31m${bold}Done copying alacritty to .kelvin-configs${normal}\e[0m"
+
+
+# st 
+echo -e "\e[1;31m${bold}copying simple terminal to .kelvin-configs${normal}\e[0m"
+cp -r $CONFIG_DIR/best ./st
+echo -e "\e[1;31m${bold}Done copying st to .kelvin-configs${normal}\e[0m"
+
+
