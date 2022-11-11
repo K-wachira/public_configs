@@ -46,3 +46,12 @@ echo -e "\e[1;31m${bold}Done copying slstatus to .kelvin-configs${normal}\e[0m"
 echo -e "\e[1;31m${bold}copying zathura to .kelvin-configs${normal}\e[0m"
 cp -r $CONFIG_DIR/zathura/* ./zathura
 echo -e "\e[1;31m${bold}Done copying zathura to .kelvin-configs${normal}\e[0m"
+
+
+# Starshit
+echo -e "\e[1;31m${bold}copying star ship to .kelvin-configs${normal}\e[0m"
+cp $CONFIG_DIR/starship.toml ./starship.toml
+echo -e "\e[1;31m${bold}Done copying starship to .kelvin-configs${normal}\e[0m"
+
+
+
