@@ -32,4 +32,17 @@ echo -e "\e[1;31m${bold}copying simple terminal to .kelvin-configs${normal}\e[0m
 cp -r $CONFIG_DIR/best ./st
 echo -e "\e[1;31m${bold}Done copying st to .kelvin-configs${normal}\e[0m"
 
+#  nvim 
+echo -e "\e[1;31m${bold}copying nvim to .kelvin-configs${normal}\e[0m"
+cp -r $CONFIG_DIR/nvim/* ./nvim
+echo -e "\e[1;31m${bold}Done copying nvim to .kelvin-configs${normal}\e[0m"
 
+#  slstatus 
+echo -e "\e[1;31m${bold}copying slstatus to .kelvin-configs${normal}\e[0m"
+cp -r $CONFIG_DIR/slstatus/* ./slstatus
+echo -e "\e[1;31m${bold}Done copying slstatus to .kelvin-configs${normal}\e[0m"
+
+# zathura 
+echo -e "\e[1;31m${bold}copying zathura to .kelvin-configs${normal}\e[0m"
+cp -r $CONFIG_DIR/zathura/* ./zathura
+echo -e "\e[1;31m${bold}Done copying zathura to .kelvin-configs${normal}\e[0m"
