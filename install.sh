@@ -9,20 +9,20 @@ clear
 
 #Dependencies
 echo -e "\e[1;31m${bold}Installing dependencies${normal}\e[0m"
-yay -Syu --noconfirm 'sxhkd' 'rofi' 'dunst' 'alsa-utils' 
-  'maim' 'xclip' 'viewnior' 'feh' 'gd' 'bluez' 'trash-cli'\
-  'ksuperkey' 'betterlockscreen' 'xfce-polkit' 'xfce4-power-manager' 'brightnessctl'\
-  'xsettingsd' 'xorg-xsetroot' 'wmname' 'wpgtk' 'meson'\
-  'zathura' 'zathura-pdf-mupdf' 'bpytop' 'ninja'\
+yay -Syu --noconfirm 'lxappearance' 'rofi' 'dunst' 'als"a-utils' 
+ 'feh'  'bluez' 'ntfs-3g' 'arandr' 'gruvbox-dark-gtk'\
+  'betterlockscreen' 'xfce-polkit' 'xfce4-power-manager' 'brightnessctl'\
+  'xorg-xsetroot'  'meson' 'sddm'\
+  'zathura' 'zathura-pdf-mupdf' 'ninja'\
   'neovim' 'apple-fonts' 'libconfig' 'spotify'\
-  'qt5-styleplugins' 'lutris' 'discord' 'cmake' 'libev' 'uthash' 'bluez-utils'\
-  'betterdiscordctl' 'dash' 'eww' 'networkmanager-dmenu-git' 'xorg'\
-  'base-devel' 'rustup' 'python' 'python-pip' 'lf' 'archivemount-git'\
-  'gobject-introspection' 'imagemagick' 'zsh' 'jq' 'poetry' 'xdo'\
-  'mpd' 'mpc' 'playerctl' 'pamixer' 'redshift' 'spicetify-cli' \
+  'qt5-styleplugins' 'cmake' 'bluez-utils'\
+  'rustup' 'python' 'python-pip' 'zsh' \
+  'mpd' 'mpc' 'playerctl' 'pamixer' 'spicetify-cli' \
   'microsoft-edge-dev-bin' 'alacritty' 'visual-studio-code-bin' 'parcellite'\
   'postman-bin' 'flameshot' 'spotify' --needed
-pip install utils material_color_utilities_python
+sudo pacman -S --noconfirm 'qt5' 'gstreamer' 'gst-libav' 'gst-plugins-good' --needed
+sudo systemctl enable sddm.service
+
 BACK_PID=$!
 wait $BACK_PID
 clear

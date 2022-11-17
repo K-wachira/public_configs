@@ -16,4 +16,15 @@ return require('packer').startup(function()
 	  },
 	  tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
+
+	-- Telescope
+	use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+	}
+		
+    -- comment
+	use 'echasnovski/mini.nvim'
+
+
 end)
