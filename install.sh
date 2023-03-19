@@ -9,23 +9,28 @@ clear
 
 #Dependencies
 echo -e "\e[1;31m${bold}Installing dependencies${normal}\e[0m"
-yay -Syu --noconfirm 'lxappearance' 'rofi' 'dunst' 'als"a-utils' 
- 'feh'  'bluez' 'ntfs-3g' 'arandr' 'gruvbox-dark-gtk'\
+yay -Syu --noconfirm 'lxappearance' 'rofi' 'dunst' 'alsa-utils' 'feh'  'bluez' 'ntfs-3g' 'arandr' 'gruvbox-dark-gtk'\
   'betterlockscreen' 'xfce-polkit' 'xfce4-power-manager' 'brightnessctl'\
-  'xorg-xsetroot'  'meson' 'sddm'\
-  'zathura' 'zathura-pdf-mupdf' 'ninja'\
+  'xorg-xsetroot'  'meson' 'sddm' 'mcfly' 'starship'\
+  'zathura' 'zathura-pdf-mupdf' 'ninja' 'lf'\
   'neovim' 'apple-fonts' 'libconfig' 'spotify'\
   'qt5-styleplugins' 'cmake' 'bluez-utils'\
   'rustup' 'python' 'python-pip' 'zsh' \
   'mpd' 'mpc' 'playerctl' 'pamixer' 'spicetify-cli' \
   'microsoft-edge-dev-bin' 'alacritty' 'visual-studio-code-bin' 'parcellite'\
   'postman-bin' 'flameshot' 'spotify' --needed
+
+echo -e "DONE with yay install"
 sudo pacman -S --noconfirm 'qt5' 'gstreamer' 'gst-libav' 'gst-plugins-good' --needed
 sudo systemctl enable sddm.service
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 BACK_PID=$!
 wait $BACK_PID
 clear
+
 
 
 cd $HOME

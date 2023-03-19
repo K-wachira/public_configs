@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if pgrep mpv > /dev/null; then
+  dunstify "MPV is already running."
+fi
+
+dunstify "Starting Lofi Radio"
+mpv --no-video "https://www.youtube.com/watch?v=jfKfPfyJRdk"
+dunstify "Playing Lofi Radio"
