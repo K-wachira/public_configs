@@ -1,0 +1,10 @@
+"Ctr T invokes grep searching the file system"
+"Ctr r invokes grep searching the zsh history"
+"ll -a lists all +hidden files"
+"ll lists all files"
+"j is an alias for z for jumping to a previously visited folder"
+"f is an alias for zi for searching through all visted folders"
+"mem is gets to 5 ram consuming applications"
+"cpu is gets to 5 ram consuming applications"
+"zap for maintaining zsh plugins"
+
