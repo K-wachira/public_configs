@@ -13,10 +13,15 @@ vim.api.nvim_set_keymap('i', 'jk', '<ESC> :w <CR>', options)
 -- NvimTreeToggle
 vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeToggle <CR>', options)
 
+-- Toggleterm
+vim.api.nvim_set_keymap('n', 't', ':Toggleterm <CR>', options)
+
+-- Competitive programming 
+vim.api.nvim_set_keymap('n', '<leader>r', ':CompetiTestRun <CR>', options)
+
 -- Telescope
 vim.api.nvim_set_keymap('n', '<leader>p', ':Telescope find_files <CR>', options)
 
---
 -- neovim osc53 Clipboard
 vim.keymap.set('n', '<leader>c', require('osc52').copy_operator, {expr = true})
 vim.keymap.set('n', '<leader>cc', '<leader>c_', {remap = true})
