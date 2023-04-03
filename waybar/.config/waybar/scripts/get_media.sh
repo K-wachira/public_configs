@@ -8,7 +8,7 @@ elif [[ $player_status = "Paused" ]]
 then
     song_status=''
 else
-    song_status='Music stopped'
+    song_status=''
 fi
 
 echo -e "$song_status $media"
