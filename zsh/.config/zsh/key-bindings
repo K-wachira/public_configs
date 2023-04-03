@@ -3,6 +3,7 @@
 "ll -a lists all +hidden files"
 "ll lists all files"
 "j is an alias for z for jumping to a previously visited folder"
+"p is an alias for z - for jumping to a previos folder"
 "f is an alias for zi for searching through all visted folders"
 "mem is gets to 5 ram consuming applications"
 "cpu is gets to 5 ram consuming applications"
