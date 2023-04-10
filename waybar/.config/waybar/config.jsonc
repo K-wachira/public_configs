@@ -7,12 +7,12 @@
     "gtk-layer-shell": true,
     "height": 0,
     "modules-left": [
-        "wlr/workspaces", "hyprland/window",
-        "custom/media"
+        "wlr/workspaces", "hyprland/window"
     ],
     "modules-center": [],
     "modules-right": [
         "custom/updates",
+        "networkspeed",
         "network",
         "cpu",
         "memory",
@@ -27,7 +27,7 @@
 
     "hyprland/window": {
         "format": "{}",
-        "max-length": 20
+        "max-length": 30
     },
     "wlr/workspaces": {
         "on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -111,7 +111,12 @@
         "tooltip-format-wifi": "{signalStrength}%",
         "max-length": 20
     },
-
+    "networkspeed": {
+        "format": "{bandwidthDownBytes}",
+        "format-wifi": " {bandwidthDownBytes}",
+        "format-disconnected": "",
+        "max-length": 20
+    },
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "tooltip": false,
