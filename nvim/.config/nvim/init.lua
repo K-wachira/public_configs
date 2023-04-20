@@ -28,7 +28,10 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup globals that should always be around
 -- See `./lua/globals
 
+require("lazy-plugins")
+
 require "globals.options"
+
+
 require "globals.remaps"
 
-require("lazy-plugins")
