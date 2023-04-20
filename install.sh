@@ -27,17 +27,18 @@ fi
 
 #Dependencies
 echo -e "\e[1;31m${bold}Installing dependencies${normal}\e[0m"
-yay -Syu --noconfirm 'lxappearance' 'rofi' 'dunst' 'alsa-utils' 'feh'  'bluez' 'ntfs-3g' 'arandr' 'gruvbox-dark-gtk'\
-  'sddm' 'mcfly' 'stow'\
-  'zathura' 'zathura-pdf-mupdf' 'ninja' 'lf'\
-  'neovim' 'apple-fonts' 'libconfig' 'spotify'\
-  'qt5-styleplugins' 'cmake' 'bluez-utils'\
-  'rustup' 'python' 'python-pip' 'zsh' \
+yay -Syu --noconfirm 'lxappearance' 'dunst' 'alsa-utils' 'feh'  'bluez' 'ntfs-3g' 'arandr' 'gruvbox-dark-gtk' \
+  'sddm-git' 'stow' \
+  'ninja' 'lf' \
+  'neovim' 'apple-fonts' 'libconfig' 'spotify' \
+  'qt5-styleplugins' 'cmake' 'bluez-utils' \
+  'python' 'python-pip' 'zsh' \
   'playerctl' 'pamixer' 'spicetify-cli' \
-  'microsoft-edge-dev-bin' 'alacritty' 'visual-studio-code-bin' 'parcellite'\
-  'postman-bin' 'flameshot' 'spotify' 'fzf' 'exa' 'zoxide' --needed
+  'microsoft-edge-dev-bin' 'alacritty' \
+  'postman-bin' 'flameshot' 'spotify' 'fzf' 'exa' 'zoxide' 'cliphist' 'wofi' 'mpv' 'clang'\
+  'fd' 'ripgrep' 'stylua' --needed
 
-echo -e "DONE with yay install"
+echo -e "DONE with yay installs"
 sudo pacman -S --noconfirm 'qt5' 'gstreamer' 'gst-libav' 'gst-plugins-good' --needed
 sudo systemctl enable sddm.service
 
