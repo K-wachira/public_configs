@@ -7,6 +7,17 @@ require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
   'nvim-tree/nvim-web-devicons',
 
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
+  },
+
   -- toggleterm
   {
     'akinsho/toggleterm.nvim', version = "*", config = true
@@ -46,15 +57,6 @@ require('lazy').setup({
    'ojroques/nvim-osc52'
   },
   -- ntree
-  {
-    'nvim-tree/nvim-tree.lua',
-    dependencies = {
-      'nvim-tree/nvim-web-devicons',
-      -- optional, for file icons
-   },
-    tag = 'nightly'
-    -- optional, updated every week. (see issue #1193)
-  },
 
   {
     'nvim-lualine/lualine.nvim',
@@ -85,11 +87,14 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
+  },
+
+  {
+    'j-hui/fidget.nvim', opts = {}
   },
 
   {
@@ -149,16 +154,17 @@ require('lazy').setup({
     },
   },
 
-  {
-    -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
-    -- Enable `lukas-reineke/indent-blankline.nvim`
-    -- See `:help indent_blankline.txt`
-    opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
-    },
+  { "lukas-reineke/indent-blankline.nvim", 
+    main = "ibl", 
+    opts = {}
   },
+  
+  {  "L3MON4D3/LuaSnip",  
+      -- follow latest release.
+      version = "v2.*",
+      -- Replace <CurrentMajor> by the latest released major (first number of latest release)  
+      --install jsregexp (optional!).
+      build = "make install_jsregexp" },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim',         opts = {} },
@@ -193,6 +199,7 @@ require('lazy').setup({
     dependencies = 'nvim-lua/plenary.nvim'
   },
 
+      {         'barrett-ruth/live-server.nvim',         build = 'npm global add live-server',         config = true     },
   {
     'numToStr/Comment.nvim',
   },

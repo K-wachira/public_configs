@@ -147,7 +147,11 @@ ins_right {
 
 ins_right { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 
-ins_right { 'location' }
+ins_right {
+  'location',
+  cond = conditions.buffer_not_empty,
+  color = { fg = colors.magenta, gui = 'bold' },
+}
 
 ins_right {
   -- Lsp server name .

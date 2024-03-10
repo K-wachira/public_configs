@@ -10,8 +10,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', options)
 vim.api.nvim_set_keymap('n', '<leader>s', ':w <CR>', options)
 vim.api.nvim_set_keymap('i', 'jk', '<ESC> :w <CR>', options)
 
--- NvimTreeToggle
-vim.api.nvim_set_keymap('n', '<leader>n', ':NvimTreeToggle <CR>', options)
+-- Neotree Toggle
+vim.api.nvim_set_keymap('n', '<leader>n', ':Neotree toggle<CR>', options)
 
 -- Toggleterm
 vim.api.nvim_set_keymap('n', 't', ':Toggleterm <CR>', options)
